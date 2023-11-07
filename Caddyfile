@@ -12,12 +12,12 @@ http://localhost:8090 {
 		HERE 200
 	}
 	handle_path /json {
-		respond <<JSON 
+		respond <<JSON
 		{"response":"nope"}
 		JSON 200
 	}
 	handle_path /placeholder {
-		respond <<JSON 
+		respond <<JSON
 		{"response":"{time.now}"}
 		JSON 200
 	}
