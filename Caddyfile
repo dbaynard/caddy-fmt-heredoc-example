@@ -11,11 +11,6 @@ http://localhost:8090 {
 		Here
 		HERE 200
 	}
-	handle_path /never {
-		respond <<JSON \{
-		"response":"nope"\}
-		JSON 200
-	}
 	handle_path /json {
 		respond <<JSON 
 		{"response":"nope"}
