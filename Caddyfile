@@ -1,0 +1,29 @@
+{
+	auto_https off
+}
+
+http://localhost:8090 {
+	handle_path /ok {
+		respond "Ok" 200
+	}
+	handle_path /here {
+		respond <<HERE
+		Here
+		HERE 200
+	}
+	handle_path /never {
+		respond <<JSON
+		\{"response":"nope"\}
+		JSON 200
+	}
+	handle_path /json {
+		respond <<JSON
+		{"response":"nope"}
+		JSON 200
+	}
+	handle_path /placeholder {
+		respond <<JSON
+		{"response":"{time.now}"}
+		JSON 200
+	}
+}
